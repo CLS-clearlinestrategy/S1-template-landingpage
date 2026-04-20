@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 4%;
+    --foreground: 56 100% 94%;
+
+    --card: 0 0% 7%;
+    --card-foreground: 56 100% 94%;
+
+    --popover: 0 0% 7%;
+    --popover-foreground: 56 100% 94%;
+
+    --primary: 182 51% 43%;
+    --primary-foreground: 56 100% 94%;
+
+    --secondary: 208 90% 27%;
+    --secondary-foreground: 56 100% 94%;
+
+    --muted: 220 10% 12%;
+    --muted-foreground: 220 10% 55%;
+
+    --accent: 182 51% 43%;
+    --accent-foreground: 56 100% 94%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 56 100% 94%;
+
+    --border: 220 10% 16%;
+    --input: 220 10% 16%;
+    --ring: 182 51% 43%;
+
+    --radius: 0.75rem;
+
+    --font-heading: 'Outfit', sans-serif;
+    --font-body: 'Inter', sans-serif;
+
+    --sidebar-background: 0 0% 6%;
+    --sidebar-foreground: 56 100% 94%;
+    --sidebar-primary: 182 51% 43%;
+    --sidebar-primary-foreground: 56 100% 94%;
+    --sidebar-accent: 208 90% 27%;
+    --sidebar-accent-foreground: 56 100% 94%;
+    --sidebar-border: 220 10% 16%;
+    --sidebar-ring: 182 51% 43%;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: auto; /* Lenis handles smooth scroll */
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-body);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    font-weight: 700;
+  }
+}
+
+/* Glassmorphism system */
+@layer components {
+  .glass-subtle {
+    background: hsla(0, 0%, 100%, 0.03);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid hsla(0, 0%, 100%, 0.06);
+  }
+
+  .glass-strong {
+    background: hsla(0, 0%, 100%, 0.07);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    border: 1px solid hsla(0, 0%, 100%, 0.1);
+    box-shadow: 0 8px 32px hsla(0, 0%, 0%, 0.3);
+  }
+
+  .glass-glow {
+    background: hsla(182, 51%, 43%, 0.05);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid hsla(182, 51%, 43%, 0.12);
+    box-shadow: 0 0 40px hsla(182, 51%, 43%, 0.08);
+  }
+}
