@@ -6,7 +6,7 @@
   <img alt="Ravius" src="./ravius.svg" height="64" />
 </picture>
 
-# Landing Page Template
+# Landing Page Template S1
 
 **Base de produção para Landing Pages modernas, escaláveis e prontas para IA.**
 
